@@ -1,0 +1,37 @@
+.nav{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    
+}
+
+.nav .logo{
+    grid-column: 2/3;
+    
+}
+
+.nav .menu{
+    display: flex;
+    justify-content:space-around;
+    grid-column: 4/6;
+    
+}
+
+.nav .menu li{
+    list-style: none;
+} 
+
+.nav .menu li a{
+    text-decoration: none;
+    color:black;
+    
+} 
+
+.nav .menu li a:hover{
+    text-decoration: underline;
+}
+
+.nav .shopping{
+    grid-column: 8/9;
+    cursor: pointer;
+}
