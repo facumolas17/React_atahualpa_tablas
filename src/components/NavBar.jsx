@@ -22,7 +22,7 @@ function NavBar(){
         </ul>
 
         <div className="shopping">
-            iconoCarrito
+            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
 
     </nav>

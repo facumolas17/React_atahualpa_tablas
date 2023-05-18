@@ -3,9 +3,35 @@
     grid-template-columns: repeat(8, 1fr);
     background-color:#000000;
     color:#ffffff;
+    padding:0 20px;
+
 }
 
 .info_empresarial{
     grid-column: 1/3;
     display: flex;
+    padding:20px 0;
+}
+
+.info_empresarial h6{
+    padding: 0 10px;
+}
+
+.info_empresarial h6 i{
+    margin-right: 0.5rem;
+}
+
+.redes{
+    grid-column: 9;
+    padding:20px 0;
+}
+
+.redes a i{
+    color:#ffffff;
+    padding: 0 10px;
+}
+
+.redes a i:hover{
+    transition: .5s all;
+    color:#ebe9eb
 }
