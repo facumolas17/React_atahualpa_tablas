@@ -7,7 +7,7 @@
 
 .nav .logo{
     grid-column: 1/3;
-    max-height: 4rem;
+    max-height: 6rem;
 }
 
 .nav .menu{
@@ -20,12 +20,13 @@
 .nav .menu li{
     list-style: none;
     font-weight: 600;
+    padding: 8px;
 } 
 
 .nav .menu li a{
     text-decoration: none;
     color:black;
-    
+    text-transform:uppercase;
 } 
 
 .nav .shopping{
@@ -53,7 +54,7 @@
     background-color: #000000;
     transform: scaleX(0);
     transform-origin: bottom right;
-    transition: transform .4s ease-out;
+    transition: transform .5s ease-out;
 
 
 }

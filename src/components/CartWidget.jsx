@@ -1,5 +1,5 @@
 import React from 'react';
-import "../css/CartWidget.css";
+import "../css/cartWidget.css";
 function CartWidget() {
   return (
     <div className="shopping">
