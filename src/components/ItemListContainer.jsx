@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/itemListContainer.css';
 import Card from './Card';
+import ItemCount from './ItemCount';
 
 function ItemListContainer() {
   return (
@@ -13,7 +14,7 @@ function ItemListContainer() {
       <Card/>
       <Card/>
       <Card/>
-      
+      <ItemCount initial={1} stock={5} />
     </div>
   )
 }

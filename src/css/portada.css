@@ -1,6 +1,6 @@
 
 .portada_header{
-    background-image:url('/public/assets/images/encabezado1.jpg');
+    background-image:url('/public/assets/images/carousel4.jpg');
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -8,7 +8,7 @@
     flex-direction: column;
     text-align: center;
     color:#ffffff;
-    justify-content: center;
+    padding-top: 100px;
     opacity: 85%;
 }
 
