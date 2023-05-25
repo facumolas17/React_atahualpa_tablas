@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/itemListContainer.css';
-import Card from './Card';
-import ItemCount from './ItemCount';
+import ItemList from './ItemList';
+import { getItems } from '../contenedores/productos';
 
 function ItemListContainer() {
+
+  const [data,setData] = useState([]);
+
+  useEffect(() =>{
+    getItems()
+      .then((respuestaDatos) =>{
+        setData(respuestaDatos);
+        
+      })
+  }, [])
+
   return (
-    <div className='container' >
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <ItemCount initial={1} stock={5} />
+    <div className='container'> 
+      
+        <ItemList data={data}/>
     </div>
   )
 }
