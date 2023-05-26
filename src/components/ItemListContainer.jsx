@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import '../css/itemListContainer.css';
 import ItemList from './ItemList';
 import { getItems } from '../contenedores/productos';
 
@@ -16,9 +15,10 @@ function ItemListContainer() {
   }, [])
 
   return (
-    <div className='container'> 
+    <div > 
       
         <ItemList data={data}/>
+
     </div>
   )
 }

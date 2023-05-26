@@ -38,7 +38,7 @@ const productos=[
         "nombre": "Cynthia",
         "precio": 986836,
         "descripcion": "lorem dsfkjsd sdlgdslsg",
-        "imagen": "/assets/images/box2.jpg",
+        "imagen": "/assets/images/vinoInicio.jpg",
         "stock": 50,
         "categoria": "Amos"
   }, {
@@ -100,9 +100,17 @@ const productos=[
   }];
     
 export function getItems(){
-      return new Promise((resolve,reject) =>{
-            setTimeout(() =>{
+      return new Promise((resolve,reject) => {
+            setTimeout( () => {
                   resolve(productos);
             }, 1500)
+      })
+}
+
+export function getSingleItem(){
+      return new Promise( (resolve, reject) =>{
+            setTimeout( () => {
+                  resolve(productos[2]);
+            },1500)
       })
 }

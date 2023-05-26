@@ -1,14 +1,16 @@
 import React from 'react';
 import Item from './Item';
+import "../css/itemList.css";
+
 
 function ItemList({data}) {
   return (
-    <div>
+    <div className='container'>
         {
             data.map((item)=>{
                 return(
                     <Item
-                        key={item.key}
+                        key={item.id}
                         nombre={item.nombre}
                         precio={item.precio}
                         descripcion={item.descripcion}
