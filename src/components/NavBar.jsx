@@ -12,13 +12,13 @@ function NavBar(){
                 <Link className="underline" to="/">Inicio</Link>
             </li>
             <li className="">
-                <Link className="underline" to="#">Tablas</Link>
+                <Link className="underline" to="categoria/tablas">Tablas</Link>
             </li>
             <li className="">
-                <Link className="underline" to="/">Bebidas</Link>
+                <Link className="underline" to="categoria/bebidas">Bebidas</Link>
             </li>
             <li className="">
-                <Link className="underline" to="#">Combos</Link>
+                <Link className="underline" to="categoria/combos">Combos</Link>
             </li>
             <li className="">
                 <Link className="underline" to="#">Contacto</Link>

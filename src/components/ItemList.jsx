@@ -4,6 +4,7 @@ import "../css/itemList.css";
 
 
 function ItemList({data}) {
+
   return (
     <div className='container'>
         {
@@ -11,6 +12,7 @@ function ItemList({data}) {
                 return(
                     <Item
                         key={item.id}
+                        id={item.id}
                         nombre={item.nombre}
                         precio={item.precio}
                         descripcion={item.descripcion}

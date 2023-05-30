@@ -16,7 +16,7 @@ const productos=[
         "descripcion": "lorem dsfkjsd sdlgdslsg",
         "imagen": "/assets/images/picada_gourmet.jpg",
         "stock": 37,
-        "categoria": "Renaud"
+        "categoria": "tablas"
   }, {
         "id": 3,
         "nombre": "Charity",
@@ -24,7 +24,7 @@ const productos=[
         "descripcion": "lorem dsfkjsd sdlgdslsg",
         "imagen": "/assets/images/picada_quesos.jpg",
         "stock": 78,
-        "categoria": "Pancho"
+        "categoria": "tablas"
     }, {
         "id": 4,
         "nombre": "Nikolos",
@@ -32,7 +32,7 @@ const productos=[
         "descripcion": "lorem dsfkjsd sdlgdslsg",
         "imagen": "/assets/images/box1.jpg",
         "stock": 67,
-        "categoria": "Nelia"
+        "categoria": "tablas"
     }, {
         "id": 5,
         "nombre": "Cynthia",
@@ -40,7 +40,7 @@ const productos=[
         "descripcion": "lorem dsfkjsd sdlgdslsg",
         "imagen": "/assets/images/vinoInicio.jpg",
         "stock": 50,
-        "categoria": "Amos"
+        "categoria": "bebidas"
   }, {
         "id": 6,
         "nombre": "Rolland",
@@ -48,7 +48,7 @@ const productos=[
         "descripcion": "lorem dsfkjsd sdlgdslsg",
         "imagen": "/assets/images/box3.jpg",
         "stock": 39,
-        "categoria": "Andreana"
+        "categoria": "bebidas"
   }, {
         "id": 7,
         "nombre": "Norton",
@@ -56,7 +56,7 @@ const productos=[
         "descripcion": "lorem dsfkjsd sdlgdslsg",
         "imagen": "/assets/images/fermentum.jpg",
         "stock": 82,
-        "categoria": "Othilia"
+        "categoria": "bebidas"
   }, {
         "id": 8,
         "nombre": "Dillie",
@@ -64,7 +64,7 @@ const productos=[
         "descripcion": "lorem dsfkjsd sdlgdslsg",
         "imagen": "/assets/images/escabeche.jpg",
         "stock": 4,
-        "categoria": "Cornelius"
+        "categoria": "bebidas"
   }, {
         "id": 9,
         "nombre": "Hasty",
@@ -72,7 +72,7 @@ const productos=[
         "descripcion": "lorem dsfkjsd sdlgdslsg",
         "imagen": "/assets/images/comboAceites.jpg",
         "stock": 98,
-        "categoria": "Laina"
+        "categoria": "combos"
   }, {
         "id": 10,
         "nombre": "Paddie",
@@ -80,7 +80,7 @@ const productos=[
         "descripcion": "lorem dsfkjsd sdlgdslsg",
         "imagen": "/assets/images/comboSalsasx3.jpg",
         "stock": 11,
-        "categoria": "Wendye"
+        "categoria": "combos"
   }, {
         "id": 11,
         "nombre": "Frasco",
@@ -88,7 +88,7 @@ const productos=[
         "descripcion": "lorem dsfkjsd sdlgdslsg",
         "imagen": "/assets/images/vinoFurlan.jpg",
         "stock": 42,
-        "categoria": "Corrina"
+        "categoria": "combos"
   }, {
         "id": 12,
         "nombre": "Asia",
@@ -96,7 +96,7 @@ const productos=[
         "descripcion": "lorem dsfkjsd sdlgdslsg",
         "imagen": "/assets/images/vinoInicio.jpg",
         "stock": 99,
-        "categoria": "Lynelle"
+        "categoria": "combos"
   }];
     
 export function getItems(){
@@ -107,10 +107,35 @@ export function getItems(){
       })
 }
 
-export function getSingleItem(){
+export function getSingleItem(id){
       return new Promise( (resolve, reject) =>{
+
+            let itemFind = productos.find((item) =>{
+                 
+                       return item.id === Number(id);
+            })
+
             setTimeout( () => {
-                  resolve(productos[2]);
+                  if(itemFind) resolve(itemFind);
+                  else reject(new Error("no se encontro el producto")); 
+
+            },1500)
+      })
+}
+
+export function getItemsByCategory(cat){
+
+      return new Promise( (resolve, reject) =>{
+
+            let itemFind = productos.filter((item) =>{
+                 
+                       return item.categoria === cat;
+            })
+
+            setTimeout( () => {
+                  if(itemFind) resolve(itemFind);
+                  else reject(new Error("no existe esta categoría")); 
+
             },1500)
       })
 }

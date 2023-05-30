@@ -1,8 +1,13 @@
 import React from 'react';
 import '../css/item.css';
-function Item({nombre, precio, descripcion, imagen}) {
+import { Link } from 'react-router-dom';
+
+function Item({nombre, precio, descripcion, imagen, id}) {
+
+    const urlDetalle=`/producto/${id}`;
+
   return (
-    
+
         <div className="card">
             <div className="imagen">
                 <img src={imagen} />
@@ -11,7 +16,9 @@ function Item({nombre, precio, descripcion, imagen}) {
                 <h3>{nombre}</h3>
                 <p>{descripcion}</p>
                 <h3>$ {precio}</h3>
-                <a href="#">Leer más</a>
+                <Link to={urlDetalle}>
+                    Leer más
+                </Link>
             </div>
         </div>
     
