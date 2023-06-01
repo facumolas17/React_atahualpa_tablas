@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
 import { getSingleItem } from '../contenedores/productos';
 import { useParams } from 'react-router-dom';
+import '../css/itemDetailContainer.css';
 
 function ItemDetailContainer() {
 
@@ -16,7 +17,7 @@ function ItemDetailContainer() {
   }, [id])
 
   return (
-    <div>
+    <div className='container_detail'>
         <ItemDetail prod={prod} />
     </div>
   )

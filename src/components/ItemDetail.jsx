@@ -9,13 +9,11 @@ function ItemDetail({prod}) {
             
             <div className="contenido_detail">
                 <h3>{prod.nombre}</h3>
-                <h4>{prod.descripcion}</h4>
-                <h3>$ {prod.precio}</h3>
-                
-                
+                <h4>{prod.descripcion}</h4>            
             </div>
+
             <div>
-                    <img className='img_detalle' src={prod.imagen} />
+                <img className='img_detalle' src={prod.imagen} />
             </div>
             <h3>$ {prod.precio}</h3>
             < ItemCount initial={1} stock={prod.stock} />
