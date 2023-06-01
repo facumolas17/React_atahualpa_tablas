@@ -1,0 +1,24 @@
+.container_count button{
+    
+    text-decoration: none;
+    padding: 5px;
+    color:#FF6969;
+    border: 1px solid #FF6969;
+    border-radius: 6px;
+    transition: all 400ms ease;
+}
+
+.container_count button:hover{
+    background: #FF6969;
+    color:#ffffff;
+}
+
+.info_producto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info_producto button{
+    margin: 10px;
+}

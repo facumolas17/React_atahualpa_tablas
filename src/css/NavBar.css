@@ -3,6 +3,7 @@
     grid-template-columns: repeat(8, 1fr);
     align-items: center;
     padding: 10px 50px;
+    border-bottom: solid 1px #000000;
 }
 
 .nav .logo{

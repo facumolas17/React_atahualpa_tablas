@@ -5,7 +5,7 @@ function NavBar(){
     return(
     <nav className="nav">
 
-        <img className="logo" src="/assets/images/Logo.png" alt="logo empresarial" />
+        <img className="logo" src="/assets/images/Logo1.png" alt="logo empresarial" />
         
         <ul className="menu">
             <li className="">
