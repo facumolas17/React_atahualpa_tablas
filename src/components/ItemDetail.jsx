@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/itemDetail.css';
 import ItemCount from '../components/ItemCount.jsx';
 import { Link } from 'react-router-dom';
 
 function ItemDetail({prod}) {
 
+    const [estadoCart, setEstadoCart] = useState(false);
+
    const onAddToCart = (count) => {
-        alert(`Agregaste al carrito ${count} unidades`);
+        setEstadoCart(true);
     }
 
   return (
@@ -22,7 +24,15 @@ function ItemDetail({prod}) {
                 <img className='img_detalle' src={prod.imagen} />
             </div>
             <h3>$ {prod.precio}</h3>
-            < ItemCount initial={1} stock={prod.stock} onAddToCart={onAddToCart} />
+            {
+                estadoCart === false ? (
+                    <ItemCount initial={1} stock={prod.stock} onAddToCart={onAddToCart} /> )
+                    : (
+                        <button>Finalizar compra</button>
+                    )
+                
+            }
+            
         </div>
     
   )
