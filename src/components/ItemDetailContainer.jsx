@@ -7,6 +7,7 @@ import '../css/itemDetailContainer.css';
 function ItemDetailContainer() {
 
   const [prod, setProd] = useState({});
+  const [error, setError] = useState();
   const { id } = useParams();
 
   useEffect( () =>{
@@ -14,7 +15,25 @@ function ItemDetailContainer() {
     .then( (Singleitem) =>{
       setProd(Singleitem);
     })
-  }, [id])
+    .catch((errorMsg) => {
+      setError(errorMsg.message);
+    })
+  }, [id]);
+
+  if(!prod.id) {
+    return ( 
+    <>
+      {
+        error ? (
+          <div>
+            <h2>Error obteniendo los datos</h2>
+            <p>{error}</p>
+          </div>
+        ) : ( <h2>Cargando . . .</h2> )
+      }
+    </>
+    )
+  }
 
   return (
     <div className='container_detail'>
